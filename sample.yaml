@@ -24,3 +24,16 @@ dry_run: false                     # true prints actions without sending orders
 TESTNET: true                      # true for testnet routing; false for production
 log_level: INFO                    # DEBUG | INFO | WARNING | ERROR
 state_path: delta_strangle_state.json
+#symbol_base: BTCUSDT
+#expiry_mode: explicit_YYYY-MM-DD
+#explicit_expiry_date: "2025-09-26"
+#contracts_per_leg: 2
+#use_market_orders: true
+#stop_loss_k:
+#margin_mode: isolated
+#leverage: 2
+#TESTNET: false
+#log_level: INFO
+#max_daily_runs: 1
+#dry_run: false
+#state_path: delta_strangle_state.json
