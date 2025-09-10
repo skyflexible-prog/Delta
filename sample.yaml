@@ -1,0 +1,26 @@
+# Symbol and expiry
+symbol_base: BTCUSDT
+expiry_mode: nearest_weekly        # nearest_weekly | nearest_daily | explicit_YYYY-MM-DD
+explicit_expiry_date: null         # e.g., "2025-09-26" only if using explicit_YYYY-MM-DD
+
+# Sizing
+contracts_per_leg: 1               # integer contracts per leg
+notional_per_leg: null             # float in quote currency; if set, overrides contracts_per_leg
+
+# Order behavior
+use_market_orders: true            # set false to use limit with slippage
+slippage_ticks: 2                  # only used if use_market_orders=false
+
+# Risk controls
+stop_loss_k: 1                     # one of {1,2,3,4}; stop = p * (1 + k)
+margin_mode: isolated              # isolated | cross
+leverage: 2                        # integer leverage if applicable
+
+# Execution safety
+max_daily_runs: 1                  # ensure one run per UTC day
+dry_run: false                     # true prints actions without sending orders
+
+# Runtime
+TESTNET: true                      # true for testnet routing; false for production
+log_level: INFO                    # DEBUG | INFO | WARNING | ERROR
+state_path: delta_strangle_state.json
